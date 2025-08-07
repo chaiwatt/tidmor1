@@ -381,7 +381,7 @@
                                         </span>
                                         <span><strong>เคมีโอลิมปิก ค่าย 2 สสวท.</strong> รอบคัดตัวแทนประเทศไทย</span>
                                     </li>
-                                    <li class="achievement-item">
+                                    {{-- <li class="achievement-item">
                                         <span class="achievement-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24" height="24"><path fill-rule="evenodd" d="M15.188 8.122a.75.75 0 01.062 1.058l-5.25 6.5a.75.75 0 01-1.112.075l-3.25-3.5a.75.75 0 011.125-.975l2.616 2.828 4.76-5.95a.75.75 0 011.058-.062z" clip-rule="evenodd" /></svg>
                                         </span>
@@ -392,7 +392,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24" height="24"><path fill-rule="evenodd" d="M15.188 8.122a.75.75 0 01.062 1.058l-5.25 6.5a.75.75 0 01-1.112.075l-3.25-3.5a.75.75 0 011.125-.975l2.616 2.828 4.76-5.95a.75.75 0 011.058-.062z" clip-rule="evenodd" /></svg>
                                         </span>
                                         <span><strong>คณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล</strong> (โครงการเรียนดีโอลิมปิก)</span>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
