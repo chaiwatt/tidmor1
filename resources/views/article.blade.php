@@ -232,8 +232,11 @@
         
         <!-- Footer (ปรับปรุงแล้ว) -->
         <footer class="footer">
-            <p><a href="{{route("article")}}">บทความทั้งหมด</a></p>
-            <p>&copy; 2025 TidMor1. All rights reserved.</p>
+            <p>
+                &copy; {{ date('Y') }} TidMor1.
+                <span class="footer__rights">All rights reserved.</span>
+                <a href="{{route('article')}}">บทความ</a>
+            </p>
         </footer>
     </div>
 </body>
