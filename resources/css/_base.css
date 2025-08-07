@@ -1,0 +1,40 @@
+:root {
+    --color-primary: #3b82f6; /* blue-600 */
+    --color-primary-dark: #2563eb; /* blue-700 */
+    --color-secondary: #64748b; /* slate-500 */
+    --color-text: #334155; /* slate-700 */
+    --color-heading: #0f172a; /* slate-900 */
+    --color-background: #f8fafc; /* slate-50 */
+    --color-white: #ffffff;
+    --color-border: #e2e8f0; /* slate-200 */
+    --color-star-default: #cbd5e1; /* slate-300 */
+    --color-star-filled: #f59e0b; /* amber-500 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.main-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

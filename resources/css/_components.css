@@ -1,0 +1,78 @@
+/* === Button === */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+}
+.btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: var(--color-white);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-heading);
+    text-decoration: none;
+}
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.navbar__link a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+.navbar__link a:hover {
+    color: var(--color-primary);
+}
+
+/* === Footer === */
+.footer {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-border);
+}
+.footer p {
+    margin-bottom: 0.75rem;
+}
+.footer a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+.footer a:hover {
+    color: var(--color-primary);
+}
