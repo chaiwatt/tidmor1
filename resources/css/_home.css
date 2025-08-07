@@ -30,14 +30,23 @@
 }
 
 
-/* === Features Section === */
+/* === Features Section (Responsive) === */
 .features {
     max-width: 64rem;
     margin: 0 auto 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    /* Mobile First: Default to 1 column */
+    grid-template-columns: 1fr;
 }
+
+/* Desktop: Switch to 3 columns on larger screens */
+@media (min-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .feature-card {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
@@ -116,37 +125,134 @@
 .countdown-item, .countdown-number { font-size: 1.5rem; }
 .countdown-label { font-size: 0.65rem; text-transform: uppercase; }
 
-/* === Content Blocks === */
+/* === Content Blocks (Responsive) === */
 .content-blocks-wrapper { max-width: 64rem; margin: 3rem auto 0; }
 .content-block { background-color: var(--color-white); border: 1px solid var(--color-border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; }
 .content-block__header { display: flex; align-items: center; margin-bottom: 1rem; }
 .content-block__icon { font-size: 2.5rem; margin-right: 1rem; }
 .content-block__title { font-size: 1.5rem; font-weight: 700; }
 .content-block__subtitle { font-size: 1rem; color: var(--color-secondary); }
-.content-block__body { border-top: 1px solid var(--color-border); padding-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+.content-block__body {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    /* Mobile First: Default to 1 column */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet/Desktop: Switch to 2 columns */
+@media (min-width: 768px) {
+    .content-block__body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .content-block__topic-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
 .content-block__topic-list { list-style-position: inside; }
 .content-block__topic-list li { margin-bottom: 0.25rem; }
 
-/* === Author & Pricing === */
+/* === Author & Pricing (Responsive & Refined) === */
 .author-section { padding: 3rem 0; }
-.author-card { max-width: 64rem; margin: 0 auto; display: flex; align-items: center; gap: 3rem; background-color: var(--color-white); padding: 3rem; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+.author-card {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    /* Mobile First: Stack vertically, center content */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Desktop: Switch to horizontal layout */
+@media (min-width: 1024px) {
+    .author-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 3rem;
+        gap: 3rem;
+    }
+}
+
+.author-image-wrapper {
+    /* No specific styles needed */
+}
 .author-image { width: 12rem; height: 12rem; border-radius: 9999px; object-fit: cover; }
-.author-name { font-size: 1.875rem; font-weight: 700; }
-.author-title { font-size: 1.25rem; color: var(--color-primary); margin-bottom: 1rem; }
-.achievement-list { list-style: none; padding: 0; }
-.achievement-item { display: flex; align-items: flex-start; margin-bottom: 0.75rem; }
-.achievement-icon { color: var(--color-star-filled); margin-right: 0.75rem; }
+.author-info {
+    /* No specific styles needed */
+}
+.author-name { 
+    font-size: 1.75rem; /* Reduced font size */
+    font-weight: 700; 
+}
+.author-title { 
+    font-size: 1.125rem; /* Reduced font size */
+    color: var(--color-primary); 
+    margin-bottom: 1rem; 
+}
+.achievements-list { 
+    list-style: none; 
+    padding: 0; 
+    /* Ensure list is left-aligned on desktop */
+    text-align: left; 
+}
+.achievement-item { 
+    display: flex; 
+    align-items: flex-start; /* Align icon and text to the top */
+    margin-bottom: 0.75rem; 
+}
+.achievement-icon { 
+    color: var(--color-star-filled); 
+    margin-right: 0.5rem; /* Adjusted spacing */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-top: 2px; /* Align icon vertically with text */
+}
+
 .pricing-section { margin-top: 3rem; text-align: center; }
-.pricing-card { max-width: 42rem; margin: 0 auto 2rem; background-color: var(--color-white); padding: 3rem; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+.pricing-card { max-width: 42rem; margin: 0 auto 2rem; background-color: var(--color-white); padding: 2rem; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
 .pricing-card__title { font-size: 1.5rem; font-weight: 700; }
 .pricing-card__subtitle { margin-top: 0.5rem; color: var(--color-secondary); }
 .pricing-card__price-wrapper { margin: 1rem 0; }
-.price-display { display: flex; justify-content: center; align-items: baseline; gap: 0.75rem; }
+.price-display {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    gap: 0.25rem; /* Adjust vertical gap */
+}
 .original-price { font-size: 2rem; text-decoration: line-through; color: var(--color-secondary); }
 .sale-price { font-size: 4rem; font-weight: 800; color: #ef4444; }
 .pricing-card__price { font-size: 4rem; font-weight: 800; }
 .pricing-card__price span { color: #4f46e5; }
+
+/* Responsive font sizes for pricing on mobile */
+@media (max-width: 767px) {
+    .original-price { font-size: 1.75rem; }
+    .sale-price { font-size: 3.5rem; }
+    
+    /* Hide "ราคา" on mobile by setting parent font-size to 0
+       and restoring it for the number and the word "บาท" */
+    .pricing-card__price {
+        font-size: 0; /* Hides "ราคา" and "บาท" text nodes */
+    }
+    .pricing-card__price span {
+        font-size: 3.5rem; /* Restore font size for the number */
+    }
+    .pricing-card__price::after {
+        content: '\00a0บาท'; /* Add "บาท" back using a non-breaking space */
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--color-text);
+    }
+}
+
 .qr-code-wrapper { margin-top: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 .qr-code-image { width: 180px; height: 180px; border-radius: 1rem; }
 .qr-code-text { font-weight: 600; }
@@ -157,3 +263,4 @@
 .rating-star.filled { color: var(--color-star-filled); }
 .rating-score { font-size: 1rem; color: var(--color-secondary); }
 .sale-countdown-wrapper { background-color: #ef4444; color: var(--color-white); padding: 0.75rem; border-radius: 0.75rem; margin: 1.5rem 0; }
+.pricing-card__footer-text { margin-top: 1.5rem; color: var(--color-secondary); }
