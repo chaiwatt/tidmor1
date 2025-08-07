@@ -1,0 +1,36 @@
+/* sarabun-400-regular */
+@font-face {
+  font-display: swap; 
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/sarabun-v16-thai-regular.woff2') format('woff2'); /* << มีแค่บรรทัดนี้ */
+}
+
+/* sarabun-500-medium */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/sarabun-v16-thai-500.woff2') format('woff2'); /* << มีแค่บรรทัดนี้ */
+}
+
+/* sarabun-700-bold */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/sarabun-v16-thai-700.woff2') format('woff2'); /* << มีแค่บรรทัดนี้ */
+}
+
+/* sarabun-800-bold */
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/sarabun-v16-thai-800.woff2') format('woff2'); /* << มีแค่บรรทัดนี้ */
+}
+
