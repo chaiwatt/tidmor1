@@ -189,11 +189,11 @@
     /* No specific styles needed */
 }
 .author-name { 
-    font-size: 1.75rem; /* Reduced font size */
+    font-size: 1.75rem; 
     font-weight: 700; 
 }
 .author-title { 
-    font-size: 1.125rem; /* Reduced font size */
+    font-size: 1.125rem; 
     color: var(--color-primary); 
     margin-bottom: 1rem; 
 }
@@ -228,9 +228,26 @@
     gap: 0.25rem; /* Adjust vertical gap */
 }
 .original-price { font-size: 2rem; text-decoration: line-through; color: var(--color-secondary); }
-.sale-price { font-size: 4rem; font-weight: 800; color: #ef4444; }
+.sale-price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ef4444;
+}
 .pricing-card__price { font-size: 4rem; font-weight: 800; }
 .pricing-card__price span { color: #4f46e5; }
+
+/* Add "ราคา" before sale price on desktop */
+@media (min-width: 768px) {
+    .sale-price::before {
+        content: 'ราคา ';
+        font-size: 4rem;  /* Make font size the same as the price */
+        font-weight: 800; /* Make font weight the same as the price */
+        color: var(--color-text);
+        vertical-align: baseline;
+        margin-right: 0.5rem;
+    }
+}
+
 
 /* Responsive font sizes for pricing on mobile */
 @media (max-width: 767px) {
@@ -250,6 +267,25 @@
         font-size: 3.5rem;
         font-weight: 800;
         color: var(--color-text);
+    }
+
+    /* Fix author card width to match other cards on mobile */
+    .author-section .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Stack author name on mobile */
+    .author-name__prefix, .author-name__main {
+        display: block;
+    }
+    
+    .author-name {
+        font-size: 1.5rem; /* Further reduced font size for mobile */
+    }
+
+    .author-title {
+        font-size: 1.1rem; /* Reduce title font size on mobile */
     }
 }
 

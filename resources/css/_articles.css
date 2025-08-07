@@ -142,7 +142,7 @@
     }
 
     .article-card__title {
-        font-size: 1.375rem; /* Smaller size for mobile */
+        font-size: 1.6rem; /* Increased size for mobile */
     }
     
     .article-container {

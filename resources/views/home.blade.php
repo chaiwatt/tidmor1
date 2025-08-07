@@ -366,7 +366,10 @@
                                 <img src="https://placehold.co/400x400/e0f2fe/0ea5e9?text=PProgram" alt="พี่โปรแกรม ณัฎฐพัชร์ ทวีจันทร์" class="author-image">
                             </div>
                             <div class="author-info">
-                                <h3 class="author-name">พี่โปรแกรม ณัฎฐพัชร์ ทวีจันทร์</h3>
+                                <h3 class="author-name">
+                                    <span class="author-name__prefix">พี่โปรแกรม</span>
+                                    <span class="author-name__main">ณัฎฐพัชร์ ทวีจันทร์</span>
+                                </h3>
                                 <p class="author-title">จากประสบการณ์ในสนามสอบ สู่คู่มือพิชิตข้อสอบวิทยาศาสตร์</p>
                                 <ul class="achievements-list">
                                     <li class="achievement-item">

@@ -53,15 +53,34 @@
 <body>
     <div class="page-wrapper">
         <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="container">
                 <a href="{{url('')}}" class="navbar__brand">TidMor1</a>
+                
+                <!-- Desktop Menu -->
                 <ul class="navbar__links">
-                    <li class="navbar__link"><a href="{{url('')}}">หน้าแรก (สินค้า)</a></li>
+                    <li class="navbar__link"><a href="{{url('')}}">หน้าแรก</a></li>
                     <li class="navbar__link"><a href="{{route('article')}}">บทความ</a></li>
                 </ul>
+
+                <!-- Hamburger Menu Button (for mobile) -->
+                <button class="navbar__hamburger" id="hamburger-button" aria-label="เมนู">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu (Fullscreen Overlay) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menu__links">
+                <li class="mobile-menu__link"><a href="{{url('')}}">หน้าแรก</a></li>
+                <li class="mobile-menu__link"><a href="{{route('article')}}">บทความ</a></li>
+            </ul>
+        </div>
+
 
         <main class="main-content">
             <div class="container">
