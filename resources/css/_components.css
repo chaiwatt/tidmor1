@@ -1,78 +1,283 @@
-/* === Button === */
-.btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+/* === Hero Section (Home) === */
+.hero {
+    background: linear-gradient(170deg, #f0f9ff 0%, #ffffff 100%);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+.hero__title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1.2;
+}
+.hero__school-name {
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.hero__subtitle {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-secondary);
+}
+.hero__cta-wrapper {
+    margin-top: 2rem;
+}
+
+
+/* === Features Section (Responsive) === */
+.features {
+    max-width: 64rem;
+    margin: 0 auto 3rem;
+    display: grid;
+    gap: 1.5rem;
+    /* Mobile First: Default to 1 column */
+    grid-template-columns: 1fr;
+}
+
+/* Desktop: Switch to 3 columns on larger screens */
+@media (min-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.feature-card__number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+.feature-card__title {
+    margin-top: 0.5rem;
     font-weight: 700;
     font-size: 1.125rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    transition: all 0.3s ease;
-    text-align: center;
-    border: 2px solid transparent;
-}
-.btn:hover {
-    background-color: var(--color-primary-dark);
-    transform: scale(1.05);
-}
-
-/* === Navbar === */
-.navbar {
-    background-color: var(--color-white);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navbar__brand {
-    font-weight: 800;
-    font-size: 1.5rem;
     color: var(--color-heading);
-    text-decoration: none;
 }
-.navbar__links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-.navbar__link a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.2s ease;
-}
-.navbar__link a:hover {
-    color: var(--color-primary);
-}
-
-/* === Footer === */
-.footer {
-    margin-top: 5rem;
-    text-align: center;
+.feature-card__text {
     font-size: 1rem;
     color: var(--color-secondary);
-    padding: 2rem 0;
+}
+
+/* === Content & Book Section === */
+.content-section__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-heading);
+    margin-bottom: 2rem;
+}
+.book-preview-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.book-preview-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 380px;
+}
+.book-preview-image {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.countdown-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(239, 68, 68, 0.9);
+    color: var(--color-white);
+    padding: 0.75rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    backdrop-filter: blur(5px);
+}
+.countdown-banner-upcoming {
+    background-color: rgba(249, 115, 22, 0.9);
+}
+.countdown-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    font-weight: 800;
+}
+.countdown-item, .countdown-number { font-size: 1.5rem; }
+.countdown-label { font-size: 0.65rem; text-transform: uppercase; }
+
+/* === Content Blocks (Responsive) === */
+.content-blocks-wrapper { max-width: 64rem; margin: 3rem auto 0; }
+.content-block { background-color: var(--color-white); border: 1px solid var(--color-border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+.content-block__header { display: flex; align-items: center; margin-bottom: 1rem; }
+.content-block__icon { font-size: 2.5rem; margin-right: 1rem; }
+.content-block__title { font-size: 1.5rem; font-weight: 700; }
+.content-block__subtitle { font-size: 1rem; color: var(--color-secondary); }
+
+.content-block__body {
     border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    /* Mobile First: Default to 1 column */
+    grid-template-columns: 1fr;
 }
-.footer p {
-    margin-bottom: 0.75rem;
+
+/* Tablet/Desktop: Switch to 2 columns */
+@media (min-width: 768px) {
+    .content-block__body {
+        grid-template-columns: 1fr 1fr;
+    }
 }
-.footer a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
+
+.content-block__topic-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
+.content-block__topic-list { list-style-position: inside; }
+.content-block__topic-list li { margin-bottom: 0.25rem; }
+
+/* === Author & Pricing (Responsive & Refined) === */
+.author-section { padding: 3rem 0; }
+.author-card {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    /* Mobile First: Stack vertically, center content */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-.footer a:hover {
-    color: var(--color-primary);
+
+/* Desktop: Switch to horizontal layout */
+@media (min-width: 1024px) {
+    .author-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 3rem;
+        gap: 3rem;
+    }
 }
+
+.author-image-wrapper {
+    /* No specific styles needed */
+}
+.author-image { width: 12rem; height: 12rem; border-radius: 9999px; object-fit: cover; }
+.author-info {
+    /* No specific styles needed */
+}
+.author-name { 
+    font-size: 1.75rem; /* Reduced font size */
+    font-weight: 700; 
+}
+.author-title { 
+    font-size: 1.125rem; /* Reduced font size */
+    color: var(--color-primary); 
+    margin-bottom: 1rem; 
+}
+.achievements-list { 
+    list-style: none; 
+    padding: 0; 
+    /* Ensure list is left-aligned on desktop */
+    text-align: left; 
+}
+.achievement-item { 
+    display: flex; 
+    align-items: flex-start; /* Align icon and text to the top */
+    margin-bottom: 0.75rem; 
+}
+.achievement-icon { 
+    color: var(--color-star-filled); 
+    margin-right: 0.5rem; /* Adjusted spacing */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-top: 2px; /* Align icon vertically with text */
+}
+
+.pricing-section { margin-top: 3rem; text-align: center; }
+.pricing-card { max-width: 42rem; margin: 0 auto 2rem; background-color: var(--color-white); padding: 2rem; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+.pricing-card__title { font-size: 1.5rem; font-weight: 700; }
+.pricing-card__subtitle { margin-top: 0.5rem; color: var(--color-secondary); }
+.pricing-card__price-wrapper { margin: 1rem 0; }
+.price-display {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    gap: 0.25rem; /* Adjust vertical gap */
+}
+.original-price { font-size: 2rem; text-decoration: line-through; color: var(--color-secondary); }
+.sale-price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ef4444;
+}
+.pricing-card__price { font-size: 4rem; font-weight: 800; }
+.pricing-card__price span { color: #4f46e5; }
+
+/* Add "ราคา" before sale price on desktop */
+@media (min-width: 768px) {
+    .sale-price::before {
+        content: 'ราคา ';
+        font-size: 4rem;  /* Make font size the same as the price */
+        font-weight: 800; /* Make font weight the same as the price */
+        color: var(--color-text);
+        vertical-align: baseline;
+        margin-right: 0.5rem;
+    }
+}
+
+
+/* Responsive font sizes for pricing on mobile */
+@media (max-width: 767px) {
+    .original-price { font-size: 1.75rem; }
+    .sale-price { font-size: 3.5rem; }
+    
+    /* Hide "ราคา" on mobile by setting parent font-size to 0
+       and restoring it for the number and the word "บาท" */
+    .pricing-card__price {
+        font-size: 0; /* Hides "ราคา" and "บาท" text nodes */
+    }
+    .pricing-card__price span {
+        font-size: 3.5rem; /* Restore font size for the number */
+    }
+    .pricing-card__price::after {
+        content: '\00a0บาท'; /* Add "บาท" back using a non-breaking space */
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--color-text);
+    }
+}
+
+.qr-code-wrapper { margin-top: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.qr-code-image { width: 180px; height: 180px; border-radius: 1rem; }
+.qr-code-text { font-weight: 600; }
+.rating-wrapper { margin: 1.2rem 0 1.5rem; }
+.rating-stars { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+.rating-star { width: 2.5rem; height: 2.5rem; cursor: pointer; color: var(--color-star-default); transition: all 0.2s ease; }
+.rating-star:hover { transform: scale(1.1); }
+.rating-star.filled { color: var(--color-star-filled); }
+.rating-score { font-size: 1rem; color: var(--color-secondary); }
+.sale-countdown-wrapper { background-color: #ef4444; color: var(--color-white); padding: 0.75rem; border-radius: 0.75rem; margin: 1.5rem 0; }
+.pricing-card__footer-text { margin-top: 1.5rem; color: var(--color-secondary); }
