@@ -1,0 +1,48 @@
+/* === Floating Action Button (FAB) Container === */
+.fab-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column-reverse; /* เรียงปุ่มจากล่างขึ้นบน */
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+/* === Individual Floating Action Buttons === */
+.fab {
+    /* รีเซ็ตสไตล์ของปุ่มและลิงก์ */
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    /* กำหนดขนาด */
+    width: 60px;
+    height: 60px;
+
+    /* เพิ่มเงาและทำให้ขอบมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 50%; /* ทำให้เงาเป็นวงกลม */
+    
+    /* เพิ่ม transition */
+    transition: transform 0.2s ease;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+.fab svg {
+    display: block; /* ลบช่องว่างใต้ SVG */
+    width: 100%;
+    height: 100%;
+}
+
+/* ซ่อนปุ่มบนจอใหญ่ */
+@media (min-width: 768px) {
+    .fab-container {
+        display: none;
+    }
+}

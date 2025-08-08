@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- Floating Action Button (FAB) Logic ---
+    const fabContainer = document.getElementById('fab-container');
+    const fabCloseButton = document.getElementById('fab-close');
+
+    if (fabContainer && fabCloseButton) {
+        fabCloseButton.addEventListener('click', function() {
+            fabContainer.style.display = 'none';
+        });
+    }
+
+
     // --- Star Rating Logic ---
     function setupStarRating(containerId, scoreTextId) {
         const starsContainer = document.getElementById(containerId);
