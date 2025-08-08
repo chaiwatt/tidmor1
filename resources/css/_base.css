@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #3b82f6; /* blue-600 */
-    --color-primary-dark: #2563eb; /* blue-700 */
+    --color-primary: #2563eb; /* blue-600 (ปรับให้เข้มขึ้น) */
+    --color-primary-dark: #1d4ed8; /* blue-700 (ปรับให้เข้มขึ้น) */
     --color-secondary: #64748b; /* slate-500 */
     --color-text: #334155; /* slate-700 */
     --color-heading: #0f172a; /* slate-900 */

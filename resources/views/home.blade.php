@@ -95,21 +95,21 @@
                         <div class="feature-card__number">
                             <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>
                         </div>
-                        <h3 class="feature-card__title">แนวข้อสอบจริง</h3>
+                        <h2 class="feature-card__title">แนวข้อสอบจริง</h2>
                         <p class="feature-card__text">3,000 ข้อแยกเรื่อง</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__number">
                             <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
                         </div>
-                        <h3 class="feature-card__title">เนื้อหาอัพเดทล่าสุด</h3>
+                        <h2 class="feature-card__title">เนื้อหาอัพเดทล่าสุด</h2>
                         <p class="feature-card__text">อัพเดทล่าสุด พ.ศ. 2568</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__number">
                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"/></svg>
                         </div>
-                        <h3 class="feature-card__title">เฉลยละเอียด</h3>
+                        <h2 class="feature-card__title">เฉลยละเอียด</h2>
                         <p class="feature-card__text">อธิบายเข้าใจง่ายทุกข้อ</p>
                     </div>
                 </section>
@@ -510,7 +510,6 @@
                 <path d="M3.56979 1.29272C3.70709 1.29272 3.78947 1.18719 3.78947 1.05528V0.237438C3.78947 0.105528 3.67963 -1.00639e-07 3.56979 -1.00639e-07H0.219679C0.164759 -1.00639e-07 0.10984 0.0263821 0.0549199 0.0527641C0.02746 0.105528 -2.09503e-07 0.158292 -2.09503e-07 0.211056V5.22364C-2.09503e-07 5.2764 0.02746 5.32917 0.0549199 5.38193C0.10984 5.40831 0.164759 5.43469 0.219679 5.43469H3.56979C3.70709 5.43469 3.78947 5.32917 3.78947 5.19726V4.37941C3.78947 4.2475 3.67963 4.14198 3.56979 4.14198H1.29062V3.29775H3.56979C3.70709 3.29775 3.78947 3.19222 3.78947 3.06031V2.24247C3.78947 2.11056 3.67963 2.00503 3.56979 2.00503H1.29062V1.16081H3.56979V1.29272Z" transform="translate(23.421 16.8329)" fill="#38B900"/>
             </svg>
         </a>
-  
     </div>
 
 
