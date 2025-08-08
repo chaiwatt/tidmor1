@@ -79,7 +79,7 @@
         <header class="hero">
             <div class="container">
                 <h1 class="hero__title">คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ</h1>
-                <p class="hero__school-name">เพื่อพิชิตสอบเข้า ม.1 โรงเรียน {{ $school->name }}</p>
+                <p class="hero__school-name">เพื่อพิชิตสอบเข้า ม.1 โรงเรียน{{ $school->name }}</p>
                 <p class="hero__subtitle">ออกแบบตามหลักสูตรแกนกลาง (สสวท.) และข้อสอบวิทยาศาสตร์โอลิมปิก ระดับมัธยมศึกษาตอนต้น (IJSO) ครอบคลุมทุกเนื้อหาที่ต้องรู้สำหรับสนามสอบเข้า ม.1 โรงเรียนดังโดยเฉพาะ</p>
                 <div class="hero__cta-wrapper">
                     <a href="#content-details" class="btn">ดูรายละเอียดเนื้อหา</a>
