@@ -17,7 +17,7 @@ class HomeController extends Controller
             $school = School::where('slug', $slug)->firstOrFail();
         } else {
             $school = new \stdClass();
-            $school->name = "โรงเรียนดังทั่วประเทศ";
+            $school->name = "ดังทั่วประเทศ";
         }
 
         // 3. เรียกใช้ Builder เพื่อสร้าง JSON (Controller มี Logic แค่นี้)
