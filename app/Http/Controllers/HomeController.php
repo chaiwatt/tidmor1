@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use stdClass;
 use App\Models\School;
 use Illuminate\Http\Request;
 use App\Services\JsonLdBuilder;
@@ -16,7 +17,7 @@ class HomeController extends Controller
         if ($slug) {
             $school = School::where('slug', $slug)->firstOrFail();
         } else {
-            $school = new \stdClass();
+            $school = new stdClass();
             $school->name = "ดังทั่วประเทศ";
         }
 
