@@ -24,7 +24,10 @@ class JsonLdBuilder
             $locationText = " " . $school->name . " " . $school->province . " และ";
             $productName .= $locationText;
             $productDesc .= $locationText;
-        } 
+        }else{
+            $productName .= " ";
+            $productDesc .= " ";
+        }
         $productName .= "โรงเรียนดังทั่วประเทศ";
         $productDesc .= "โรงเรียนดังทั่วประเทศ ในรูปแบบ PDF กว่า 1,500 หน้า ครอบคลุมเนื้อหา 5 หมวดหลัก: ฟิสิกส์, เคมี, ชีววิทยา, วิทยาศาสตร์พื้นฐาน, และโลกและอวกาศ";
 
