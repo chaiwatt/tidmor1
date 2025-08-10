@@ -19,6 +19,8 @@ class HomeController extends Controller
         } else {
             $school = new stdClass();
             $school->name = "ดังทั่วประเทศ";
+            $school->province = "";
+            $school->school_info = "";
         }
 
         // 3. เรียกใช้ Builder เพื่อสร้าง JSON (Controller มี Logic แค่นี้)
