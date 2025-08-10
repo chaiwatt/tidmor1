@@ -248,11 +248,12 @@
     align-items: center; /* Center items horizontally */
     gap: 0.25rem; /* Adjust vertical gap */
 }
-.original-price { font-size: 2rem; text-decoration: line-through; color: var(--color-secondary); }
+.original-price { font-size: 2rem; text-decoration: line-through; color: #ef4444; }
 .sale-price {
     font-size: 4rem;
     font-weight: 800;
-    color: #ef4444;
+    color: #028644;
+
 }
 .pricing-card__price { font-size: 4rem; font-weight: 800; }
 .pricing-card__price span { color: #4f46e5; }

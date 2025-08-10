@@ -118,11 +118,11 @@
                     <h2 class="content-section__title">เจาะลึกเนื้อหาในคลังข้อสอบ</h2>
 
                     <!-- Example 1 -->
-                    {{-- <section class="book-preview-section">
+                    <section class="book-preview-section">
                         <div class="book-preview-wrapper">
                             <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ" alt="หน้าปกหนังสือคลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
                         </div>
-                    </section> --}}
+                    </section>
                     
                     <!-- Example 2: Sale is Active -->
                     {{-- <section class="book-preview-section">
@@ -154,7 +154,7 @@
                     </section> --}}
 
                     <!-- Example 3: Upcoming Sale -->
-                     <section class="book-preview-section">
+                     {{-- <section class="book-preview-section">
                         <div class="book-preview-wrapper">
                             <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ" alt="หน้าปกหนังสือคลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
                             <div class="countdown-banner countdown-banner-upcoming">
@@ -179,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> --}}
 
                     <div class="content-blocks-wrapper">
                         
@@ -404,7 +404,7 @@
                 <section class="pricing-section">
                     
                     <!-- Pricing Card Example 1: Standard Price -->
-                    <div class="pricing-card">
+                    {{-- <div class="pricing-card">
                         <h2 class="pricing-card__title">เครื่องมือที่ดีที่สุดเพื่อเตรียมสอบเข้า ม.1</h2>
                         <p class="pricing-card__subtitle">เข้าถึงคลังข้อสอบคุณภาพกว่า 3,000 ข้อในราคาเดียว รูปแบบไฟล์ PDF</p>
                         
@@ -427,9 +427,9 @@
                         </div>
 
                         <p class="pricing-card__footer-text">ออกแบบเพื่อความสำเร็จในสนามสอบแข่งขัน</p>
-                    </div>
+                    </div> --}}
 
-                    {{-- <div class="pricing-card">
+                    <div class="pricing-card">
                         <h2 class="pricing-card__title">เครื่องมือที่ดีที่สุดเพื่อเตรียมสอบเข้า ม.1</h2>
                         <p class="pricing-card__subtitle">เข้าถึงคลังข้อสอบคุณภาพกว่า 3,000 ข้อในราคาเดียว รูปแบบไฟล์ PDF</p>
                         
@@ -439,8 +439,8 @@
                             <p class="rating-score" id="rating-score-text-2">ให้คะแนนหนังสือเล่มนี้</p>
                         </div>
 
-                        <div class="sale-countdown-wrapper">
-                            <div class="countdown-title">Flash Sale สิ้นสุดใน</div>
+                        {{-- <div class="sale-countdown-wrapper">
+                            <div class="countdown-title">โปรโมชั่นจะสิ้นสุดใน</div>
                             <div id="price-card-countdown" class="countdown-timer">
                                 <div class="countdown-item">
                                     <span id="days-price-card" class="countdown-number">00</span>
@@ -459,12 +459,12 @@
                                     <span class="countdown-label">วินาที</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="pricing-card__price-wrapper">
                             <div class="price-display">
-                                <span class="original-price">299 บาท</span>
-                                <span class="sale-price">199 บาท</span>
+                                <span class="original-price">499 บาท</span>
+                                <span class="sale-price">299 บาท</span>
                             </div>
                         </div>
                         
@@ -474,7 +474,7 @@
                         </div>
 
                         <p class="pricing-card__footer-text">ออกแบบเพื่อความสำเร็จในสนามสอบแข่งขัน</p>
-                    </div> --}}
+                    </div>
 
                 </section>
             </main>
