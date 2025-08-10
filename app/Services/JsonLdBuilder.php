@@ -21,15 +21,12 @@ class JsonLdBuilder
         $productDesc = "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อสำหรับสอบเข้า ม.1";
 
         if (!empty($school->province)) {
-            $locationText = " " . $school->name . " " . $school->province;
+            $locationText = " " . $school->name . " " . $school->province . " และ";
             $productName .= $locationText;
             $productDesc .= $locationText;
-        } else {
-            $productName .= " " . $school->name; // กรณีไม่มีจังหวัด ก็แค่ต่อชื่อโรงเรียน
-            $productDesc .= " " . $school->name;
-        }
-        $productName .= " และโรงเรียนดังทั่วประเทศ";
-        $productDesc .= " และโรงเรียนดังทั่วประเทศ ในรูปแบบ PDF กว่า 1,500 หน้า ครอบคลุมเนื้อหา 5 หมวดหลัก: ฟิสิกส์, เคมี, ชีววิทยา, วิทยาศาสตร์พื้นฐาน, และโลกและอวกาศ";
+        } 
+        $productName .= "โรงเรียนดังทั่วประเทศ";
+        $productDesc .= "โรงเรียนดังทั่วประเทศ ในรูปแบบ PDF กว่า 1,500 หน้า ครอบคลุมเนื้อหา 5 หมวดหลัก: ฟิสิกส์, เคมี, ชีววิทยา, วิทยาศาสตร์พื้นฐาน, และโลกและอวกาศ";
 
         $data = [
             "@context" => "https://schema.org",
