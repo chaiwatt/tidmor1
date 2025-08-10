@@ -82,6 +82,25 @@ public function buildForProduct(object $school, string $currentUrl): string
                     "@type" => "MonetaryAmount",
                     "value" => "0",
                     "currency" => "THB"
+                ],
+                "deliveryTime" => [
+                    "@type" => "ShippingDeliveryTime",
+                    "handlingTime" => [
+                        "@type" => "QuantitativeValue",
+                        "minValue" => 0,
+                        "maxValue" => 0,
+                        "unitCode" => "DAY"
+                    ],
+                    "transitTime" => [
+                        "@type" => "QuantitativeValue",
+                        "minValue" => 0,
+                        "maxValue" => 0,
+                        "unitCode" => "DAY"
+                    ]
+                ],
+                "shippingDestination" => [
+                    "@type" => "DefinedRegion",
+                    "name" => "Worldwide"
                 ]
             ],
             "hasMerchantReturnPolicy" => [
