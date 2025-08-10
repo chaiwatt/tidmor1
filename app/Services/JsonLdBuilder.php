@@ -56,7 +56,7 @@ class JsonLdBuilder
             ],
             "offers" => [
                 "@type" => "Offer",
-                "url" => $currentUrl,
+                "url" => $currentUrl, // ใช้ตัวแปรตามที่คุณต้องการ
                 "priceCurrency" => "THB",
                 "price" => "199",
                 "priceSpecification" => [
@@ -64,6 +64,20 @@ class JsonLdBuilder
                     "price" => "299",
                     "priceCurrency" => "THB",
                     "validThrough" => "2025-12-31"
+                ],
+                "availability" => "https://schema.org/InStock",
+                "shippingDetails" => [
+                    "@type" => "OfferShippingDetails",
+                    "shippingRate" => [
+                        "@type" => "MonetaryAmount",
+                        "value" => "0",
+                        "currency" => "THB"
+                    ]
+                ],
+                "hasMerchantReturnPolicy" => [
+                    "@type" => "MerchantReturnPolicy",
+                    "applicableCountry" => "TH",
+                    "returnPolicyCategory" => "https://schema.org/MerchantReturnNotPermitted"
                 ]
             ],
             "aggregateRating" => [
