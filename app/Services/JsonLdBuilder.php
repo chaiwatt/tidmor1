@@ -11,14 +11,31 @@ class JsonLdBuilder
      * @param string $currentUrl
      * @return string
      */
+
+
+
     public function buildForProduct(object $school, string $currentUrl): string
     {
-        // ย้าย Array ทั้งหมดมาไว้ที่นี่
+        // จัดการเรื่องชื่อและคำอธิบายให้กระชับขึ้น
+        $productName = "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ เพื่อพิชิตสอบเข้า ม.1";
+        $productDesc = "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อสำหรับสอบเข้า ม.1";
+
+        if (!empty($school->province)) {
+            $locationText = " " . $school->name . " " . $school->province;
+            $productName .= $locationText;
+            $productDesc .= $locationText;
+        } else {
+            $productName .= " " . $school->name; // กรณีไม่มีจังหวัด ก็แค่ต่อชื่อโรงเรียน
+            $productDesc .= " " . $school->name;
+        }
+        $productName .= " และโรงเรียนดังทั่วประเทศ";
+        $productDesc .= " และโรงเรียนดังทั่วประเทศ ในรูปแบบ PDF กว่า 1,500 หน้า ครอบคลุมเนื้อหา 5 หมวดหลัก: ฟิสิกส์, เคมี, ชีววิทยา, วิทยาศาสตร์พื้นฐาน, และโลกและอวกาศ";
+
         $data = [
             "@context" => "https://schema.org",
             "@type" => "Product",
-            "name" => "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ เพื่อพิชิตสอบเข้า ม.1" . $school->name ." " . $school->province . "และโรงเรียนดังทั่วประเทศ",
-            "description" => "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อสำหรับสอบเข้า ม.1" . $school->name ." ". $school->province  . "และโรงเรียนดังทั่วประเทศ ในรูปแบบ PDF กว่า 1,500 หน้า ครอบคลุมเนื้อหา 5 หมวดหลัก: ฟิสิกส์, เคมี, ชีววิทยา, วิทยาศาสตร์พื้นฐาน, และโลกและอวกาศ",
+            "name" => $productName,
+            "description" => $productDesc,
             "image" => "https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ",
             "brand" => [
                 "@type" => "Brand",
@@ -31,8 +48,11 @@ class JsonLdBuilder
             "about" => [
                 "@type" => "EducationalOrganization",
                 "name" => $school->name,
-                "school_info" => $school->school_info,
-                "province" => $school->province
+                "description" => $school->school_info,
+                "address" => [ // <-- แก้ไขเป็น address
+                    "@type" => "PostalAddress",
+                    "addressRegion" => $school->province
+                ]
             ],
             "offers" => [
                 "@type" => "Offer",
@@ -56,7 +76,8 @@ class JsonLdBuilder
             "learningResourceType" => "Book",
             "educationalLevel" => "Middle School"
         ];
-
-        return json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        
+        // แปลง Array เป็น JSON string แล้วคืนค่าออกไป (สำคัญมาก)
+        return json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     }
 }

@@ -18,7 +18,7 @@ class HomeController extends Controller
             $school = School::where('slug', $slug)->firstOrFail();
         } else {
             $school = new stdClass();
-            $school->name = "ดังทั่วประเทศ";
+            $school->name = "โรงเรียนดังทั่วประเทศ";
             $school->province = "";
             $school->school_info = "";
         }
