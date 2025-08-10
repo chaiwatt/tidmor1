@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
+            $table->text('school_info')->nullable();
+            $table->string('province')->nullable();
             $table->timestamps();
         });
     }
