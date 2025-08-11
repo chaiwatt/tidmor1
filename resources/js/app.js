@@ -10,13 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburgerButton.addEventListener('click', function() {
             hamburgerButton.classList.toggle('is-active');
             mobileMenu.classList.toggle('is-active');
-
-            // Prevent scrolling when menu is open
-            if (mobileMenu.classList.contains('is-active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            document.body.style.overflow = mobileMenu.classList.contains('is-active') ? 'hidden' : '';
         });
     }
 
@@ -31,14 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    // --- Star Rating Logic ---
+    // --- Star Rating Logic (อัปเดตแล้ว) ---
     function setupStarRating(containerId, scoreTextId) {
         const starsContainer = document.getElementById(containerId);
         const scoreText = document.getElementById(scoreTextId);
         if (!starsContainer || !scoreText) return;
 
+        const initialRating = Math.round(parseFloat(starsContainer.dataset.rating)) || 0;
+        let currentRating = initialRating;
+
         const starCount = 5;
-        let currentRating = 0;
 
         for (let i = 1; i <= starCount; i++) {
             const star = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -63,6 +59,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 scoreText.textContent = `ขอบคุณสำหรับ ${currentRating} คะแนน!`;
             });
         });
+
+        // กำหนดสถานะเริ่มต้นของดาวและข้อความ
+        if (initialRating > 0) {
+            updateStars(initialRating);
+            
+            // อ่านค่าคะแนนเฉลี่ย (ทศนิยม) และจำนวนรีวิว
+            const originalRatingValue = parseFloat(starsContainer.dataset.rating).toFixed(1);
+            const ratingCount = starsContainer.dataset.count || 0;
+
+            // อัปเดตข้อความให้แสดงทั้งคะแนนเฉลี่ยและจำนวนรีวิว
+            scoreText.textContent = `คะแนนเฉลี่ย: ${originalRatingValue}/5 (จาก ${ratingCount} รีวิว)`; 
+        } else {
+            scoreText.textContent = 'ให้คะแนนหนังสือเล่มนี้';
+        }
     }
 
     // --- Reusable Countdown Timer Logic ---
@@ -103,23 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- Initialize Components ---
-    setupStarRating('rating-stars-container-1', 'rating-score-text-1');
     setupStarRating('rating-stars-container-2', 'rating-score-text-2');
 
     const now = new Date();
     
-    // Config for active sale (ends in 3 days)
-    setupCountdown({
-        containerId: 'countdown-active',
-        daysId: 'days-active',
-        hoursId: 'hours-active',
-        minutesId: 'minutes-active',
-        secondsId: 'seconds-active',
-        endDate: new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000),
-        endText: 'โปรโมชั่นสิ้นสุดแล้ว'
-    });
-
-    // Config for upcoming sale (starts in 5 days)
     setupCountdown({
         containerId: 'countdown-upcoming',
         daysId: 'days-upcoming',
@@ -128,16 +125,5 @@ document.addEventListener('DOMContentLoaded', function () {
         secondsId: 'seconds-upcoming',
         endDate: new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000),
         endText: 'Flash Sale เริ่มแล้ว!'
-    });
-
-    // Config for price card sale (ends in 12 hours)
-    setupCountdown({
-        containerId: 'price-card-countdown',
-        daysId: 'days-price-card',
-        hoursId: 'hours-price-card',
-        minutesId: 'minutes-price-card',
-        secondsId: 'seconds-price-card',
-        endDate: new Date(now.getTime() + 12 * 60 * 60 * 1000),
-        endText: 'โปรโมชั่นนี้สิ้นสุดแล้ว'
     });
 });

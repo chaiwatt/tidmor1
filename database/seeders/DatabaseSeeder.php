@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             SchoolSeeder::class,
-            BookSeeder::class
+            BookSeeder::class,
+            Rating::class
         ]);
     }
 }

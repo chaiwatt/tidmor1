@@ -417,7 +417,7 @@
 
                         <div class="pricing-card__price-wrapper">
                             <p class="pricing-card__price">
-                                ราคา <span>299</span> บาท
+                                ราคา <span>{{$book->promotion_price}}</span> บาท
                             </p>
                         </div>
                         
@@ -433,8 +433,13 @@
                         <h2 class="pricing-card__title">เครื่องมือที่ดีที่สุดเพื่อเตรียมสอบเข้า ม.1</h2>
                         <p class="pricing-card__subtitle">เข้าถึงคลังข้อสอบคุณภาพกว่า 3,000 ข้อในราคาเดียว รูปแบบไฟล์ PDF</p>
                         
-                        <div class="rating-wrapper">
-                            <div class="rating-stars" id="rating-stars-container-2">
+
+                         <div class="rating-wrapper">
+                            <!-- เพิ่ม data-rating attribute และส่งค่าจาก server -->
+                             <div class="rating-stars" 
+                                 id="rating-stars-container-2" 
+                                 data-rating="{{ $ratings->avg('rating') ?? 0 }}"
+                                 data-count="{{ $ratings->count() ?? 0 }}">
                             </div>
                             <p class="rating-score" id="rating-score-text-2">ให้คะแนนหนังสือเล่มนี้</p>
                         </div>
@@ -463,8 +468,8 @@
 
                         <div class="pricing-card__price-wrapper">
                             <div class="price-display">
-                                <span class="original-price">499 บาท</span>
-                                <span class="sale-price">299 บาท</span>
+                                <span class="original-price">{{$book->price}} บาท</span>
+                                <span class="sale-price">{{$book->promotion_price}} บาท</span>
                             </div>
                         </div>
                         

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use stdClass;
+use App\Models\Rating;
 use App\Models\School;
 use Illuminate\Http\Request;
 use App\Services\JsonLdBuilder;
@@ -27,9 +29,15 @@ class HomeController extends Controller
         $jsonLdString = $jsonLdBuilder->buildForProduct($school, url()->current());
 
         // 4. ส่งข้อมูลทั้งหมดไปที่ View
+
+        $ratings = Rating::all();
+        $book = Book::first();
+
         return view('home', [
             'school' => $school,
-            'jsonLdString' => $jsonLdString
+            'jsonLdString' => $jsonLdString,
+            'ratings' => $ratings,
+            'book' => $book,
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Carbon\Carbon;
 use App\Models\Book;
+use App\Models\Rating;
 
 class JsonLdBuilder
 {
@@ -20,6 +21,9 @@ public function buildForProduct(object $school, string $currentUrl): string
     // จัดการเรื่องชื่อและคำอธิบายให้กระชับขึ้น
     $productName = "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ เพื่อพิชิตสอบเข้า ม.1";
     $productDesc = "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อสำหรับสอบเข้า ม.1";
+    $ratings = Rating::all();
+    $reviewCount = $ratings->count();
+    $ratingValue = $ratings->avg('rating');
     $book = Book::first();
     $price = $book->price;
     $promotionPrice = $book->promotion_price;
@@ -111,8 +115,8 @@ public function buildForProduct(object $school, string $currentUrl): string
         ],
         "aggregateRating" => [
             "@type" => "AggregateRating",
-            "ratingValue" => "4.9",
-            "reviewCount" => "125"
+            "ratingValue" => $ratingValue,
+            "reviewCount" => $reviewCount
         ],
         "bookFormat" => "https://schema.org/EBook",
         "numberOfPages" => "1500",
