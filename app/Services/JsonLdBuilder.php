@@ -104,7 +104,7 @@ public function buildForProduct(object $school, string $currentUrl): string
                 ],
                 "shippingDestination" => [
                     "@type" => "DefinedRegion",
-                    "name" => "Worldwide"
+                    "addressCountry" => "TH"
                 ]
             ],
             "hasMerchantReturnPolicy" => [
