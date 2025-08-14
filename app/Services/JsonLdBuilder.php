@@ -19,8 +19,8 @@ class JsonLdBuilder
 public function buildForProduct(object $school, string $currentUrl): string
 {
     // จัดการเรื่องชื่อและคำอธิบายให้กระชับขึ้น
-    $productName = "ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO";
-    $productDesc = "ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO";
+    $productName = "ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ";
+    $productDesc = "ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ";
     $ratings = Rating::all();
     $reviewCount = $ratings->count();
     $ratingValue = $ratings->avg('rating');
