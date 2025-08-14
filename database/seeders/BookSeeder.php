@@ -14,7 +14,7 @@ class BookSeeder extends Seeder
     public function run(): void
     {
         DB::table('books')->insert([
-            'name' => "คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ",
+            'name' => "ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO",
             'author_name' => "ณัฏฐพัชร์ ทวีจันทร์",
             'author_nickname' => "พี่โปรแกรม",
             'price' => 499,

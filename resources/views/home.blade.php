@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คลังข้อสอบวิทย์ 3,000 ข้อ พิชิตสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}</title>
+    <title>ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO {{ $school->name }} {{ $school->province }}</title>
 
     <!-- SEO: Meta Description (สำคัญมาก) -->
-    <meta name="description" content="คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด สำหรับเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์">
+    <meta name="description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO พร้อมเฉลยละเอียด สำหรับเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์">
 
     <!-- SEO: Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}">
@@ -78,7 +78,7 @@
 
         <header class="hero">
             <div class="container">
-                <h1 class="hero__title">คลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ</h1>
+                <h1 class="hero__title">ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO</h1>
                 <p class="hero__school-name">เพื่อพิชิตสอบเข้า ม.1 {{ $school->name }}</p>
                 <p class="hero__subtitle">ออกแบบตามหลักสูตรแกนกลาง (สสวท.) และข้อสอบวิทยาศาสตร์โอลิมปิก ระดับมัธยมศึกษาตอนต้น (IJSO) ครอบคลุมทุกเนื้อหาที่ต้องรู้สำหรับสนามสอบเข้า ม.1 โรงเรียนดังโดยเฉพาะ</p>
                 <div class="hero__cta-wrapper">
@@ -120,7 +120,7 @@
                     <!-- Example 1 -->
                     <section class="book-preview-section">
                         <div class="book-preview-wrapper">
-                            <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ" alt="หน้าปกหนังสือคลังข้อสอบวิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
+                            <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ" alt="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ – ครบทุกเนื้อหา สสวท. และแนวข้อสอบ IJSO" class="book-preview-image">
                         </div>
                     </section>
                     
