@@ -134,7 +134,16 @@
                     <!-- Example 1 -->
                     <section class="book-preview-section">
                         <div class="book-preview-wrapper">
-                            <img src="{{asset('assets/images/book.webp')}}" alt="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
+                            <!-- Start: แก้ไขส่วนนี้ -->
+                            <picture>
+                                <!-- รูปสำหรับจอเล็ก (Mobile) -->
+                                <source media="(max-width: 767px)" srcset="{{asset('assets/images/book-mobile.webp')}}">
+                                <!-- รูปสำหรับจอใหญ่ (Desktop) -->
+                                <source media="(min-width: 768px)" srcset="{{asset('assets/images/book.webp')}}">
+                                <!-- รูป fallback เริ่มต้น -->
+                                <img src="{{asset('assets/images/book.webp')}}" alt="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
+                            </picture>
+                            <!-- End: แก้ไขส่วนนี้ -->
                         </div>
                     </section>
                     
