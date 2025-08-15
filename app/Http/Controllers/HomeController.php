@@ -74,11 +74,27 @@ class HomeController extends Controller
 
     public function article()
     {
-        // เปลี่ยนจาก get() เป็น paginate() และเพิ่ม orderBy()
-        $articles = Article::where('public_date', '<=', now())
-                            ->orderBy('public_date', 'desc') // เรียงจากใหม่ไปเก่า
-                            ->paginate(10); // แสดงผลหน้าละ 10 บทความ
+        // 1. สร้าง Query Builder ขึ้นมา
+        $query = Article::where('public_date', '<=', now());
 
+        // 2. (เพิ่มเข้ามา) โหลด Relationship ล่วงหน้าเพื่อประสิทธิภาพ
+        $query->with('featureArticle');
+
+        // 3. (โค้ดเดิมของคุณ) ใช้ subquery เพื่อเรียงบทความ Feature ขึ้นก่อน
+        $query->orderByRaw("
+            EXISTS (
+                SELECT 1 FROM feature_articles
+                WHERE feature_articles.article_id = articles.id
+            ) DESC
+        ");
+
+        // 4. (โค้ดเดิมของคุณ) เรียงลำดับที่เหลือตามวันที่เผยแพร่
+        $query->orderBy('public_date', 'desc');
+
+        // 5. ทำการ paginate
+        $articles = $query->paginate(10);
+
+        // 6. ส่งข้อมูลไปยัง View
         return view('article', [
             'articles' => $articles
         ]);

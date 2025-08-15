@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\FeatureArticle;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
@@ -29,5 +30,10 @@ class Article extends Model
                 ? $this->public_date->addYears(543)->locale('th')->translatedFormat('j F Y')
                 : null,
         );
+    }
+
+    public function featureArticle()
+    {
+        return $this->hasOne(FeatureArticle::class);
     }
 }

@@ -56,6 +56,11 @@
                     @forelse($articles as $article)
                         <article class="article-card">
                             {{-- Title --}}
+
+                             @if($article->featureArticle)
+                                <div class="article-card__ribbon"><span>ยอดนิยม</span></div>
+                            @endif
+
                             <h2 class="article-card__title">
                                 <a href="{{ route('detail', ['slug' => $article->slug]) }}">{{ $article->title }}</a>
                             </h2>
