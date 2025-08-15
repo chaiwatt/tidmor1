@@ -12,7 +12,7 @@ use App\Http\Controllers\SiteMapController;
 
 // 1. Route ที่เฉพาะเจาะจงที่สุดควรอยู่บนสุดเสมอ
 // เปลี่ยน Route ของ sitemap มาไว้ตรงนี้
-Route::get('sitemap/sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
+Route::get('/sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
 
 Route::get('/บทความ', [HomeController::class, 'article'])->name('article');
 
