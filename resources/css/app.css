@@ -5,3 +5,58 @@
 @import './_home.css';
 @import './_articles.css';
 @import './_floating-button.css';
+
+/* Pagination Styles */
+.pagination-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* เราจะใช้คลาส .pagination ที่ Laravel สร้างให้ */
+ul.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.pagination li a,
+.pagination li span {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    margin-left: -1px; /* ทำให้เส้นขอบติดกัน */
+    color: #374151;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    background-color: #ffffff;
+    font-size: 0.875rem;
+}
+
+.pagination li:first-child a,
+.pagination li:first-child span {
+    margin-left: 0;
+}
+
+.pagination li a:hover {
+    background-color: #f3f4f6;
+}
+
+/* Active Page */
+.pagination li.active span {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    cursor: default;
+}
+
+/* Disabled Links (Previous/Next) */
+.pagination li.disabled span {
+    color: #9ca3af;
+    background-color: #f9fafb;
+    cursor: not-allowed;
+}

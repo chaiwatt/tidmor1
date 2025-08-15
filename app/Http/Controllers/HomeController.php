@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use stdClass;
+use App\Models\Book;
 use App\Models\Rating;
 use App\Models\School;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Services\JsonLdBuilder;
+use App\Services\JsonLdArticleBuilder;
 
 class HomeController extends Controller
 {
@@ -15,7 +17,6 @@ class HomeController extends Controller
     public function show(?string $slug = null)
     {
         $jsonLdBuilder = new JsonLdBuilder();
-        // 2. Logic การหา school ของคุณยังคงเหมือนเดิม
         if ($slug) {
             $school = School::where('slug', $slug)->firstOrFail();
         } else {
@@ -25,10 +26,7 @@ class HomeController extends Controller
             $school->school_info = "";
         }
 
-        // 3. เรียกใช้ Builder เพื่อสร้าง JSON (Controller มี Logic แค่นี้)
         $jsonLdString = $jsonLdBuilder->buildForProduct($school, url()->current());
-
-        // 4. ส่งข้อมูลทั้งหมดไปที่ View
 
         $ratings = Rating::all();
         $book = Book::first();
@@ -41,13 +39,78 @@ class HomeController extends Controller
         ]);
     }
 
-    public function article()
-    {
-        return view('article'); 
-    }
-
     public function detail(string $slug)
     {
-        return view('detail'); 
+        $jsonLdArticleBuilder = new JsonLdArticleBuilder();
+        
+        $article = Article::where('slug', $slug)
+                        ->where('public_date', '<=', now())
+                        ->firstOrFail();
+        $bodyWithReplacedHomepage = str_replace('index.html', url('/'), $article->body);
+        $allPublishedSlugs = Article::where('public_date', '<=', now())->pluck('slug')->toArray();
+        $articleBody = preg_replace_callback(
+            '/<a\s+[^>]*href=[\'"]\/บทความ\/([^\'"]+)[\'"][^>]*>(.*?)<\/a>/i',
+            function ($matches) use ($allPublishedSlugs) {
+                $foundSlug = $matches[1];
+                
+                if (in_array($foundSlug, $allPublishedSlugs)) {
+                    return $matches[0];
+                } else {
+                    return $matches[2];
+                }
+            },
+            $bodyWithReplacedHomepage // <-- ใช้ตัวแปรใหม่ตรงนี้
+        );
+
+        $jsonLdString = $jsonLdArticleBuilder->buildForProduct($article);
+        
+        // 5. ส่งข้อมูลไปยัง View
+        return view('detail', [
+            'article' => $article,
+            'jsonLdString' => $jsonLdString,
+            'articleBody' => $articleBody
+        ]);
     }
+
+    public function article()
+    {
+        // เปลี่ยนจาก get() เป็น paginate() และเพิ่ม orderBy()
+        $articles = Article::where('public_date', '<=', now())
+                            ->orderBy('public_date', 'desc') // เรียงจากใหม่ไปเก่า
+                            ->paginate(10); // แสดงผลหน้าละ 10 บทความ
+
+        return view('article', [
+            'articles' => $articles
+        ]);
+    }
+
+
+    public function showByTag(string $tag_slug)
+    {
+        $articles = Article::where('public_date', '<=', now())
+            ->whereRaw(
+                'JSON_SEARCH(tags, "one", ?, NULL, "$[*].tag_slug") IS NOT NULL',
+                [$tag_slug]
+            )
+            ->orderBy('public_date', 'desc')
+            ->paginate(10);
+
+            $tagName = $tag_slug; 
+            $firstArticle = $articles->first();
+            if ($firstArticle) {
+                foreach ($firstArticle->tags as $tag) {
+                    if ($tag['tag_slug'] === $tag_slug) {
+                        $tagName = $tag['tag'];
+                        break;
+                    }
+                }
+            }
+
+            return view('article', [
+                'articles' => $articles,
+                'pageTitle' => 'บทความในแท็ก: ' . $tagName,
+                'pageSubtitle' => 'รวมบทความทั้งหมดที่เกี่ยวกับ "' . $tagName . '"'
+            ]);
+    }
+
 }

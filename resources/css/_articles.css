@@ -105,8 +105,11 @@
 .article-content li { margin-bottom: 0.75rem; }
 .article-content a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
 .article-content a:hover { text-decoration: underline; }
+
 .back-link-wrapper { margin-top: 3rem; text-align: center; }
 .back-link { font-weight: 600; font-size: 1.1rem; }
+.back-link:hover { text-decoration: underline; }
+
 .article-header__tags {
     display: flex;
     flex-wrap: wrap;

@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SchoolSeeder::class,
             BookSeeder::class,
-            Rating::class
+            RatingSeeder::class,
+            ArticleSeeder::class
         ]);
     }
 }

@@ -16,3 +16,6 @@ Route::get('/บทความ/{slug}', [HomeController::class, 'detail'])->nam
 
 // 3. Route ที่เป็น 'catch-all' หรือกว้างที่สุด ควรอยู่ล่างสุดเสมอ
 Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
+
+// Route สำหรับแสดงบทความตาม Tag
+Route::get('/tags/{tag_slug}', [HomeController::class, 'showByTag'])->name('tags.show');
