@@ -7,6 +7,33 @@
 
     <meta name="description" content="{{$article->meta_description}}">
 
+    @php
+        $keywords = $article->tags->pluck('tag')->toArray();
+        $keywordsString = implode(', ', $keywords);
+    @endphp
+
+    <meta name="keywords" content="ข้อสอบเข้าม.1, {{ $keywordsString }}">
+
+  
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{$article->title}} - TidMor1" />
+    <meta property="og:description" content="{{$article->meta_description}}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:site_name" content="TidMor1" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{$article->title}} - TidMor1" />
+    <meta name="twitter:description" content="{{$article->meta_description}}" />
+
+    <!-- LINE & Other Social -->
+    <meta property="line:card" content="summary_large_image" />
+    <meta property="line:title" content="{{$article->title}} - TidMor1" />
+    <meta property="line:description" content="{{$article->meta_description}}" />
+
+
     <link rel="canonical" href="{{url('/')}}/บทความ/{{$article->slug}}"> 
 
     <!-- Favicon -->

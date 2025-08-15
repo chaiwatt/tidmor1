@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1</title>
     <meta name="description" content="รวมบทความ เทคนิคการเตรียมตัว และเคล็ดลับสำหรับผู้ปกครองและนักเรียนเพื่อพิชิตสนามสอบเข้า ม.1 โรงเรียนชั้นนำ">
+    <meta name="keywords" content="ข้อสอบเข้าม.1, รวมบทความ เทคนิคการเตรียมตัว, แนวข้อสอบ ม.1, เตรียมตัวสอบ ม.1, สอบเข้า ม.1, ข้อสอบคณิต ม.1, ข้อสอบภาษาไทย ม.1, ข้อสอบวิทยาศาสตร์ ม.1, เทคนิคสอบ ม.1, แนะนำการสอบ ม.1, ตัวอย่างข้อสอบ ม.1, แนวข้อสอบออนไลน์ ม.1, การวางแผนอ่านหนังสือ ม.1, สอบเข้าโรงเรียนรัฐบาล ม.1, สอบเข้าโรงเรียนเอกชน ม.1, ข้อสอบเข้า ม.1 ล่าสุด">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
+    <meta property="og:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:site_name" content="TidMor1" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
+    <meta name="twitter:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
+
+    <!-- LINE & Other Social -->
+    <meta property="line:card" content="summary_large_image" />
+    <meta property="line:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
+    <meta property="line:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
+
+
     <link rel="canonical" href="{{ route('article') }}">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
