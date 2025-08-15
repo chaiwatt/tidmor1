@@ -8,17 +8,17 @@ use App\Http\Controllers\SiteMapController;
 //     return view('welcome');
 // });
 
-Route::get('sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
+// routes/web.php
 
-// 1. Route ที่เฉพาะเจาะจงที่สุด (Static Routes) ควรอยู่บนสุด
+// 1. Route ที่เฉพาะเจาะจงที่สุดควรอยู่บนสุดเสมอ
+// เปลี่ยน Route ของ sitemap มาไว้ตรงนี้
+Route::get('sitemap/sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
+
 Route::get('/บทความ', [HomeController::class, 'article'])->name('article');
 
-// 2. Route ที่มีตัวแปร แต่ยังคงเฉพาะเจาะจง
+// 2. Route ที่มี Prefix หรือมีตัวแปรรองลงมา
 Route::get('/บทความ/{slug}', [HomeController::class, 'detail'])->name('detail');
-
-// 3. Route ที่เป็น 'catch-all' หรือกว้างที่สุด ควรอยู่ล่างสุดเสมอ
-Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
-
-// Route สำหรับแสดงบทความตาม Tag
 Route::get('/tags/{tag_slug}', [HomeController::class, 'showByTag'])->name('tags.show');
 
+// 3. Route ที่เป็น 'catch-all' หรือกว้างที่สุด ต้องอยู่ล่างสุดเสมอ
+Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
