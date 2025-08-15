@@ -8,7 +8,8 @@
     <meta name="description" content="{{$article->meta_description}}">
 
     @php
-        $keywords = $article->tags->pluck('tag')->toArray();
+        // ใช้ array_column() เพื่อดึงค่าจาก key 'tag' ของทุก item ใน array
+        $keywords = array_column($article->tags, 'tag');
         $keywordsString = implode(', ', $keywords);
     @endphp
 
