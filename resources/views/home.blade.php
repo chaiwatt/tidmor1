@@ -120,7 +120,7 @@
                     <!-- Example 1 -->
                     <section class="book-preview-section">
                         <div class="book-preview-wrapper">
-                            <img src="https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ" alt="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
+                            <img src="{{asset('assets/images/book.webp')}}" alt="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ" class="book-preview-image">
                         </div>
                     </section>
                     
