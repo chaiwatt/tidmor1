@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ {{ $school->name }} {{ $school->province }}</title>
-
-    <!-- SEO: Meta Description (สำคัญมาก) -->
+    <!-- SEO: Meta Description -->
     <meta name="description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด สำหรับเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์">
-    <meta name="keywords" content="ข้อสอบเข้าม.1, แนวข้อสอบ ม.1, เตรียมตัวสอบ ม.1, สอบเข้า ม.1, ข้อสอบคณิต ม.1, ข้อสอบภาษาไทย ม.1, ข้อสอบวิทยาศาสตร์ ม.1, เทคนิคสอบ ม.1, แนะนำการสอบ ม.1, ตัวอย่างข้อสอบ ม.1, แนวข้อสอบออนไลน์ ม.1, การวางแผนอ่านหนังสือ ม.1, สอบเข้าโรงเรียนรัฐบาล ม.1, สอบเข้าโรงเรียนเอกชน ม.1, ข้อสอบเข้า ม.1 ล่าสุด">
-
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลย - เตรียมสอบ {{ $school->name }} {{ $school->province }}">
-    <meta name="description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}">
     <meta name="keywords" content="ข้อสอบเข้าม.1, แนวข้อสอบ ม.1, เตรียมตัวสอบ ม.1, สอบเข้า ม.1, ข้อสอบคณิต ม.1, ข้อสอบภาษาไทย ม.1, ข้อสอบวิทยาศาสตร์ ม.1, เทคนิคสอบ ม.1, แนะนำการสอบ ม.1, ตัวอย่างข้อสอบ ม.1, แนวข้อสอบออนไลน์ ม.1, การวางแผนอ่านหนังสือ ม.1, สอบเข้าโรงเรียนรัฐบาล ม.1, สอบเข้าโรงเรียนเอกชน ม.1, ข้อสอบเข้า ม.1 ล่าสุด">
 
     <!-- Open Graph / Facebook -->
@@ -37,7 +31,6 @@
     <meta property="line:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
     <meta property="line:image" content="{{ asset('assets/images/book.webp') }}" />
 
-
     <!-- SEO: Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}">
 
@@ -50,9 +43,6 @@
     {{-- <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet"> --}}
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-
-
 
     <script type="application/ld+json">
         {!! $jsonLdString !!}
@@ -105,7 +95,6 @@
 <body>
 
     <div class="page-wrapper">
-
         <header class="hero">
             <div class="container">
                 <h1 class="hero__title">ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ</h1>
@@ -212,7 +201,6 @@
                     </section> --}}
 
                     <div class="content-blocks-wrapper">
-                        
                         <!-- Block 1: ฟิสิกส์ -->
                         <div class="content-block">
                             <div class="content-block__header">
@@ -432,7 +420,6 @@
                 </section>
                 
                 <section class="pricing-section">
-                    
                     <!-- Pricing Card Example 1: Standard Price -->
                     {{-- <div class="pricing-card">
                         <h2 class="pricing-card__title">เครื่องมือที่ดีที่สุดเพื่อเตรียมสอบเข้า ม.1</h2>

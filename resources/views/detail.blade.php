@@ -54,7 +54,6 @@
 <body>
     <div class="page-wrapper">
         <!-- Navigation Bar -->
-        <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="container">
                 <a href="{{url('')}}" class="navbar__brand">TidMor1</a>
