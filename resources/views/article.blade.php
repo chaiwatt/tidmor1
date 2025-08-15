@@ -7,24 +7,22 @@
     <meta name="description" content="รวมบทความ เทคนิคการเตรียมตัว และเคล็ดลับสำหรับผู้ปกครองและนักเรียนเพื่อพิชิตสนามสอบเข้า ม.1 โรงเรียนชั้นนำ">
     <meta name="keywords" content="ข้อสอบเข้าม.1, รวมบทความ เทคนิคการเตรียมตัว, แนวข้อสอบ ม.1, เตรียมตัวสอบ ม.1, สอบเข้า ม.1, ข้อสอบคณิต ม.1, ข้อสอบภาษาไทย ม.1, ข้อสอบวิทยาศาสตร์ ม.1, เทคนิคสอบ ม.1, แนะนำการสอบ ม.1, ตัวอย่างข้อสอบ ม.1, แนวข้อสอบออนไลน์ ม.1, การวางแผนอ่านหนังสือ ม.1, สอบเข้าโรงเรียนรัฐบาล ม.1, สอบเข้าโรงเรียนเอกชน ม.1, ข้อสอบเข้า ม.1 ล่าสุด">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph (Facebook / LINE / LinkedIn) -->
     <meta property="og:locale" content="th_TH" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
-    <meta property="og:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
-    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:description" content="รวมบทความ เทคนิคการเตรียมตัว และเคล็ดลับสำหรับผู้ปกครองและนักเรียนเพื่อพิชิตสนามสอบเข้า ม.1 โรงเรียนชั้นนำ" />
+    <meta property="og:url" content="https://tidmor1.com" />
     <meta property="og:site_name" content="TidMor1" />
+    <meta property="og:image" content="{{asset('assets/images/book.webp')}}" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="500" />
 
-    <!-- Twitter / X -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
-    <meta name="twitter:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
-
-    <!-- LINE & Other Social -->
-    <meta property="line:card" content="summary_large_image" />
-    <meta property="line:title" content="บทความและเทคนิคพิชิตสอบเข้า ม.1 - TidMor1" />
-    <meta property="line:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์ เพื่อเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}" />
-
+    <meta name="twitter:description" content="รวมบทความ เทคนิคการเตรียมตัว และเคล็ดลับสำหรับผู้ปกครองและนักเรียนเพื่อพิชิตสนามสอบเข้า ม.1 โรงเรียนชั้นนำ" />
+    <meta name="twitter:image" content="{{asset('assets/images/book.webp')}}" />
 
     <link rel="canonical" href="{{ route('article') }}">
 

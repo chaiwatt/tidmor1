@@ -14,19 +14,22 @@
 
     <meta name="keywords" content="ข้อสอบเข้าม.1, {{ $keywordsString }}">
 
-  
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph (Facebook / LINE / LinkedIn) -->
     <meta property="og:locale" content="th_TH" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{$article->title}} - TidMor1" />
     <meta property="og:description" content="{{$article->meta_description}}" />
-    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:url" content="https://tidmor1.com" />
     <meta property="og:site_name" content="TidMor1" />
+    <meta property="og:image" content="{{asset('assets/images/book.webp')}}" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="500" />
 
-    <!-- Twitter / X -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{$article->title}} - TidMor1" />
     <meta name="twitter:description" content="{{$article->meta_description}}" />
+    <meta name="twitter:image" content="{{asset('assets/images/book.webp')}}" />
 
     <!-- LINE & Other Social -->
     <meta property="line:card" content="summary_large_image" />
