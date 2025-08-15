@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SiteMapController;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
+Route::get('sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
 
 // 1. Route ที่เฉพาะเจาะจงที่สุด (Static Routes) ควรอยู่บนสุด
 Route::get('/บทความ', [HomeController::class, 'article'])->name('article');
@@ -19,3 +21,4 @@ Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
 
 // Route สำหรับแสดงบทความตาม Tag
 Route::get('/tags/{tag_slug}', [HomeController::class, 'showByTag'])->name('tags.show');
+
