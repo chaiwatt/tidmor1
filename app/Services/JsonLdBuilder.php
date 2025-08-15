@@ -49,7 +49,7 @@ public function buildForProduct(object $school, string $currentUrl): string
         "@type" => "Product",
         "name" => $productName,
         "description" => $productDesc,
-        "image" => "https://placehold.co/400x500/0ea5e9/ffffff?text=คลังข้อสอบวิทย์+3000+ข้อ",
+        "image" => $currentUrl . '/assets/images/book.webp',
         "brand" => [
             "@type" => "Brand",
             "name" => "TidMor1"
