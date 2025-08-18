@@ -786,7 +786,7 @@ class SchoolSeeder extends Seeder
         // Loop through each school in the flat array
         foreach ($schools as $school) {
             // Generate a slug from the school name
-            $slug = 'แนวข้อสอบม.1-' . str_replace(' ', '-', $school['name']);
+            $slug = 'แนวข้อสอบเข้าม.1-' . str_replace(' ', '-', $school['name']);
 
             // Insert the school data into the database
             DB::table('schools')->insert([

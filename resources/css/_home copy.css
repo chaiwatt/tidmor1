@@ -29,40 +29,6 @@
     margin-top: 2rem;
 }
 
-/* === Blockquote Style (Updated) === */
-.hero__quote {
-    margin-top: 2rem;
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 3rem; /* Add space for the quote mark */
-    position: relative;
-    text-align: left;
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.hero__quote::before {
-    content: '“';
-    position: absolute;
-    top: -0.2em;
-    left: 0;
-    font-size: 5rem;
-    font-weight: 700;
-    color: #93c5fd; /* Light blue for the quote mark */
-    line-height: 1;
-}
-
-.hero__quote p {
-    font-size: 1.1rem;
-    color: var(--color-primary); /* Use primary color for text */
-    font-style: italic; /* Italicize the text */
-    line-height: 1.6;
-    margin: 0;
-}
-
-
 /* === Button Style === */
 .btn {
     display: inline-block;
@@ -242,29 +208,29 @@
 .author-info {
     /* No specific styles needed */
 }
-.author-name {
-    font-size: 1.75rem;
+.author-name { 
+    font-size: 1.75rem; 
     font-weight: 700;
     margin-bottom: 0.5rem; /* Added spacing */
 }
-.author-title {
-    font-size: 1.125rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
+.author-title { 
+    font-size: 1.125rem; 
+    color: var(--color-primary); 
+    margin-bottom: 1rem; 
 }
-.achievements-list {
-    list-style: none;
-    padding: 0;
+.achievements-list { 
+    list-style: none; 
+    padding: 0; 
     /* Ensure list is left-aligned on desktop */
-    text-align: left;
+    text-align: left; 
 }
-.achievement-item {
-    display: flex;
+.achievement-item { 
+    display: flex; 
     align-items: flex-start; /* Align icon and text to the top */
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem; 
 }
-.achievement-icon {
-    color: var(--color-star-filled);
+.achievement-icon { 
+    color: var(--color-star-filled); 
     margin-right: 0.5rem; /* Adjusted spacing */
     flex-shrink: 0; /* Prevent icon from shrinking */
     margin-top: 2px; /* Align icon vertically with text */
@@ -307,36 +273,9 @@
 
 /* Responsive font sizes for pricing on mobile */
 @media (max-width: 767px) {
-    .hero__title {
-        font-size: 2.25rem; /* ลดขนาดฟอนต์ของ title */
-    }
-
-    .hero__school-name {
-        font-size: 1.25rem; /* ลดขนาดฟอนต์ของชื่อโรงเรียน */
-    }
-
-    .hero__subtitle {
-        font-size: 1.1rem; /* ลดขนาดฟอนต์ของ subtitle */
-    }
-
-    /* Updated Blockquote styles for mobile */
-    .hero__quote {
-        margin-top: 1.5rem;
-        padding-left: 2.5rem; /* Adjust left padding for mobile */
-    }
-
-    .hero__quote::before {
-        font-size: 4rem; /* Slightly smaller quote mark on mobile */
-        top: -0.1em;
-    }
-
-    .hero__quote p {
-        font-size: 1rem; /* Adjust font size for mobile */
-    }
-
     .original-price { font-size: 1.75rem; }
     .sale-price { font-size: 3.5rem; }
-
+    
     /* Hide "ราคา" on mobile by setting parent font-size to 0
        and restoring it for the number and the word "บาท" */
     .pricing-card__price {
@@ -362,7 +301,7 @@
     .author-name__prefix, .author-name__main {
         display: block;
     }
-
+    
     .author-name {
         font-size: 1.5rem; /* Further reduced font size for mobile */
     }
