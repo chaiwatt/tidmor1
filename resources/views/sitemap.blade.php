@@ -19,4 +19,13 @@
     </url>
     @endforeach
 
+    @foreach ($schools as $school)
+    <url>
+        <loc>{{url('/')}}/{{$school->slug}}</loc>
+        <lastmod>{{$article->public_date->tz('Asia/Bangkok')->toAtomString()}}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    @endforeach
+
 </urlset>

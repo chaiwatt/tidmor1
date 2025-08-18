@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\School;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -14,8 +15,11 @@ class SiteMapController extends Controller
                 ->orderBy('public_date', 'desc')
                 ->get();
 
+        $schools = School::all();
+
         return response()->view('sitemap',[
-            'articles' =>$articles
+            'articles' =>$articles,
+            'schools' => $schools
         ])->header('Content-Type','text/xml');
     }
 }
