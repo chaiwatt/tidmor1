@@ -204,7 +204,7 @@
 }
 
 .content-block__topic-title { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; }
-.content-block__topic-list { list-style-position: inside; }
+.content-block__topic-list { list-style-position: inside;margin-left: 10px; }
 .content-block__topic-list li { margin-bottom: 0.25rem; }
 
 /* === Author & Pricing (Responsive & Refined) === */
