@@ -2,11 +2,13 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
-
 use Exception;
+use Google\Client;
+use Illuminate\Console\Command;
+
+use Google\Service\SearchConsole;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
 
 class SubmitSitemap extends Command
 {
@@ -15,6 +17,12 @@ class SubmitSitemap extends Command
 
     public function handle()
     {
+            // เพิ่ม 4 บรรทัดนี้เข้าไป
+        $this->info('--- DEBUGGING ENV VALUES ---');
+        $this->line('GSC_SITE_URL: ' . env('GSC_SITE_URL'));
+        $this->line('GSC_SITEMAP_URL: ' . env('GSC_SITEMAP_URL'));
+        $this->line('GSC_SERVICE_ACCOUNT_KEY_PATH: ' . env('GSC_SERVICE_ACCOUNT_KEY_PATH'));
+
         $siteUrl = env('GSC_SITE_URL');
         $sitemapUrl = env('GSC_SITEMAP_URL');
         $keyPath = env('GSC_SERVICE_ACCOUNT_KEY_PATH');
