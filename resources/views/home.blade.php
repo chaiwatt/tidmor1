@@ -13,7 +13,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ {{ $school->name }} {{ $school->province }}" />
     <meta property="og:description" content="ข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ พร้อมเฉลยละเอียด สำหรับเตรียมสอบเข้า ม.1 {{ $school->name }} {{ $school->province }}ครอบคลุมเนื้อหาฟิสิกส์ เคมี ชีวะ และโลกดาราศาสตร์" />
-    <meta property="og:url" content="https://tidmor1.com" />
+    <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:site_name" content="TidMor1" />
     <meta property="og:image" content="{{asset('assets/images/book.webp')}}" />
     <meta property="og:image:width" content="400" />
@@ -27,7 +27,7 @@
 
 
     <!-- SEO: Canonical URL -->
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="https://tidmor1.com">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -339,7 +339,7 @@
                                 <div>
                                     <h4 class="content-block__topic-title">ระบบร่างกายมนุษย์ (20%)</h4>
                                     <ul class="content-block__topic-list">
-                                        <li>ระบบร่างกายมนุษย์: ครอบคลุมระบบย่อยอาหาร อวัยวะสำคัญในระบบย่อยอาหาร และเอมไซม์, ระบบขับถ่าย, การรักษาดุลยภาพ, ระบบหมุนเวียนเลือดและระบบหายใจ, ระบบประสาทและระบบกล้ามเนื้อ, และการเจริญเติบโต</li>
+                                        <li>ระบบร่างกายมนุษย์: ครอบคลุมระบบย่อยอาหาร อวัยวะสำคัญในระบบย่อยกอาหาร เอนไซม์, ระบบขับถ่าย, การรักษาดุลยภาพ, ระบบหมุนเวียนเลือดและระบบหายใจ, ระบบประสาทและระบบกล้ามเนื้อ, และการเจริญเติบโต</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -388,6 +388,8 @@
                         </div>
                     </div>
                 </section>
+
+                
 
                 <section class="author-section">
                     <div class="container">
