@@ -3,9 +3,11 @@
 namespace App\Console\Commands;
 
 use Exception;
+use Carbon\Carbon;
 use Google\Client;
-use Illuminate\Console\Command;
 
+use App\Models\Test;
+use Illuminate\Console\Command;
 use Google\Service\SearchConsole;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
@@ -23,6 +25,13 @@ class SubmitSitemap extends Command
         $sitemapUrl = 'https://tidmor1.com/sitemap.xml';
         $keyPath = 'app/google/sitemap-key.json';
         // ------------------------
+
+        // บันทึกเวลาที่ command นี้เริ่มทำงาน
+        Test::create([
+            'record_time' => Carbon::now()
+        ]);
+        $this->info('📝 Execution time has been recorded to the database.');
+        // -----------------------------------------
 
         $jsonKeyFile = storage_path($keyPath);
 

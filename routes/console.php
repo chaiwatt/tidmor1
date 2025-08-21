@@ -9,4 +9,6 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 // เพิ่มบรรทัดนี้เข้าไป
-Schedule::command('sitemap:submit')->daily();
+// Schedule::command('sitemap:submit')->daily();
+
+Schedule::command('sitemap:submit')->everyFiveMinutes();
