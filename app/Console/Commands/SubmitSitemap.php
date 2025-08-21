@@ -26,13 +26,6 @@ class SubmitSitemap extends Command
         $keyPath = 'app/google/sitemap-key.json';
         // ------------------------
 
-        // บันทึกเวลาที่ command นี้เริ่มทำงาน
-        Test::create([
-            'record_time' => Carbon::now()
-        ]);
-        $this->info('📝 Execution time has been recorded to the database.');
-        // -----------------------------------------
-
         $jsonKeyFile = storage_path($keyPath);
 
         // --- Validation: ตรวจสอบว่าไฟล์ JSON Key มีอยู่จริง ---

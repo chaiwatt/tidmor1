@@ -10,5 +10,5 @@ Artisan::command('inspire', function () {
 
 // เพิ่มบรรทัดนี้เข้าไป
 // Schedule::command('sitemap:submit')->daily();
+Schedule::command('sitemap:submit')->dailyAt('23:00');
 
-Schedule::command('sitemap:submit')->everyFiveMinutes();
