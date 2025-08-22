@@ -56,7 +56,17 @@ public function buildForProduct(object $school, string $currentUrl): string
         ],
         "author" => [
             "@type" => "Person",
-            "name" => "ณัฎฐพัชร์ ทวีจันทร์ (พี่โปรแกรม)"
+            "name" => "ณัฎฐพัชร์ ทวีจันทร์ (พี่โปรแกรม)",
+            "award" => [
+                "IJSO รอบ 3 (30 คนสุดท้าย) รอบคัดตัวแทนประเทศไทย ",
+                "ค่าย 2 สสวท. เคมีโอลิมปิก ครั้งที่ 20 รอบคัดตัวแทนประเทศไทย"
+                ],
+            "knowsAbout" =>  [
+                "เคมี",
+                "ฟิสิกส์",
+                "ชีววิทยา",
+                "โอลิมปิกวิชาการ"
+                ],
         ],
         "about" => [
             "@type" => "EducationalOrganization",
