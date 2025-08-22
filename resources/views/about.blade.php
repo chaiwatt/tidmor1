@@ -21,7 +21,7 @@
       "@context": "https://schema.org",
       "@type": "AboutPage",
       "name": "เกี่ยวกับเรา - TidMor1",
-      "url": "{{ url()->current() }}",
+      "url": "https://tidmor1.com/about",
       "description": "Tidmor1.com มุ่งมั่นที่จะเป็นแหล่งรวมข้อสอบและสื่อการเรียนรู้ด้านวิทยาศาสตร์คุณภาพสูงสำหรับสอบเข้า ม.1 เพื่อช่วยให้นักเรียนเตรียมความพร้อมเข้าสู่สนามสอบได้อย่างมั่นใจ",
       "publisher": {
         "@type": "Organization",
@@ -119,9 +119,9 @@
             padding: 0;
         }
 
-        .footer {
-            padding: 4rem 1rem 2rem;
-        }
+        /* .footer {
+            padding: 3rem 1rem 2rem;
+        } */
         
         .footer a {
             color: var(--color-heading);
@@ -208,10 +208,11 @@
             </div>
         </main>
         
-       <footer class="footer">
-            <p>&copy; {{ date('Y') }} TidMor1. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="/">กลับสู่หน้าหลัก</a>
+        <footer class="footer">
+            <p>
+                &copy; {{ date('Y') }} TidMor1.
+                <span class="footer__rights">All rights reserved.</span><a href="{{route('article')}}">บทความ</a><br>
+                <a class="normal-link" href="{{route('legal')}}">ข้อกำหนดและนโยบาย</a><a  class="normal-link" href="{{route('about')}}">เกี่ยวกับ</a>
             </p>
         </footer>
     </div>

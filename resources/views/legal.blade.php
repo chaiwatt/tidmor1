@@ -21,7 +21,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "ข้อตกลงในการใช้บริการและนโยบายความเป็นส่วนตัว",
-      "url": "{{ url()->current() }}",
+      "url": "https://tidmor1.com/legal",
       "description": "เอกสารข้อตกลงในการใช้บริการและนโยบายความเป็นส่วนตัวของ TidMor1 สำหรับการจำหน่ายไฟล์ข้อสอบข้อสอบเข้า ม.1 วิทยาศาสตร์ 3,000 ข้อ",
       "publisher": {
         "@type": "Organization",
@@ -121,13 +121,11 @@
         }
 
         /* === Footer Override === */
-        .footer {
-            padding: 4rem 1rem 2rem;
-        }
-        
+    
+/*         
         .footer a {
             color: var(--color-heading);
-        }
+        } */
 
     </style>
 </head>
@@ -207,9 +205,10 @@
         </main>
         
         <footer class="footer">
-            <p>&copy; {{ date('Y') }} TidMor1. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">
-                <a href="/">กลับสู่หน้าหลัก</a>
+            <p>
+                &copy; {{ date('Y') }} TidMor1.
+                <span class="footer__rights">All rights reserved.</span><a href="{{route('article')}}">บทความ</a><br>
+                <a class="normal-link" href="{{route('legal')}}">ข้อกำหนดและนโยบาย</a><a  class="normal-link" href="{{route('about')}}">เกี่ยวกับ</a>
             </p>
         </footer>
     </div>
