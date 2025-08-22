@@ -525,8 +525,8 @@
         <footer class="footer">
             <p>
                 &copy; {{ date('Y') }} TidMor1.
-                <span class="footer__rights">All rights reserved.</span>
-                <a href="{{route('article')}}">บทความ</a>
+                <span class="footer__rights">All rights reserved.</span><a href="{{route('article')}}">บทความ</a><br>
+                <a class="normal-link" href="{{route('legal')}}">ข้อกำหนดและนโยบาย</a><a  class="normal-link" href="{{route('about')}}">เกี่ยวกับ</a>
             </p>
         </footer>
         </div>

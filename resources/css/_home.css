@@ -459,6 +459,10 @@
     margin-left: 0.5rem;
 }
 
+.footer .normal-link{
+    font-weight: 400;
+}
+
 .footer a:hover {
     color: var(--color-primary);
 }

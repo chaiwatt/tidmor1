@@ -129,4 +129,13 @@ class HomeController extends Controller
             ]);
     }
 
+    public function legal()
+    {
+        return view('legal');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

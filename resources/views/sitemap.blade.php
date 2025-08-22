@@ -6,6 +6,16 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>{{url('/legal')}}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{url('/about')}}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>{{url('/')}}/บทความ</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>

@@ -13,12 +13,29 @@ use App\Http\Controllers\SiteMapController;
 // 1. Route ที่เฉพาะเจาะจงที่สุดควรอยู่บนสุดเสมอ
 // เปลี่ยน Route ของ sitemap มาไว้ตรงนี้
 Route::get('/sitemap.xml', [SiteMapController::class, 'index'])->name('sitemap');
+// Route::get('/legal', [HomeController::class, 'legal'])->name('legal');
+// Route::get('/about', [HomeController::class, 'about'])->name('about');
 
+// Route::get('/บทความ', [HomeController::class, 'article'])->name('article');
+
+// // 2. Route ที่มี Prefix หรือมีตัวแปรรองลงมา
+// Route::get('/บทความ/{slug}', [HomeController::class, 'detail'])->name('detail');
+// Route::get('/tags/{tag_slug}', [HomeController::class, 'showByTag'])->name('tags.show');
+
+// // 3. Route ที่เป็น 'catch-all' หรือกว้างที่สุด ต้องอยู่ล่างสุดเสมอ
+// Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
+
+// Route::get('/legal', [HomeController::class, 'show'])->name('home');
+
+// 1. Route ที่เจาะจงและไม่มีตัวแปร (Static Routes) ต้องอยู่บนสุดเสมอ
+Route::get('/legal', [HomeController::class, 'legal'])->name('legal');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/บทความ', [HomeController::class, 'article'])->name('article');
 
-// 2. Route ที่มี Prefix หรือมีตัวแปรรองลงมา
+// 2. Route ที่มี Prefix และมีตัวแปรตามหลัง
 Route::get('/บทความ/{slug}', [HomeController::class, 'detail'])->name('detail');
 Route::get('/tags/{tag_slug}', [HomeController::class, 'showByTag'])->name('tags.show');
 
-// 3. Route ที่เป็น 'catch-all' หรือกว้างที่สุด ต้องอยู่ล่างสุดเสมอ
+// 3. Route ที่กว้างที่สุด (Catch-all) สำหรับหน้าแรกและ slug โรงเรียน
+// **ต้องวางไว้ล่างสุดเสมอ**
 Route::get('/{slug?}', [HomeController::class, 'show'])->name('home');
