@@ -43,7 +43,95 @@ public function buildForProduct(object $school, string $currentUrl): string
     $priceValidUntilDate = Carbon::now()->addMonth()->endOfMonth()->toDateString();
 
     $validThroughDate = Carbon::now()->addYear()->endOfYear()->toDateString();
-
+    // $data = [
+    //     "@context" => "https://schema.org",
+    //     "@type" => "Product",
+    //     "name" => $productName,
+    //     "description" => $productDesc,
+    //     "image" => $currentUrl . '/assets/images/book.webp',
+    //     "brand" => [
+    //         "@type" => "Brand",
+    //         "name" => "TidMor1"
+    //     ],
+    //     "author" => [
+    //         "@type" => "Person",
+    //         "name" => "ณัฎฐพัชร์ ทวีจันทร์ (พี่โปรแกรม)",
+    //         "award" => [
+    //             "IJSO รอบ 3 (30 คนสุดท้าย) รอบคัดตัวแทนประเทศไทย ",
+    //             "ค่าย 2 สสวท. เคมีโอลิมปิก ครั้งที่ 20 รอบคัดตัวแทนประเทศไทย"
+    //             ],
+    //         "knowsAbout" =>  [
+    //             "เคมี",
+    //             "ฟิสิกส์",
+    //             "ชีววิทยา",
+    //             "โอลิมปิกวิชาการ"
+    //             ],
+    //     ],
+    //     "about" => [
+    //         "@type" => "EducationalOrganization",
+    //         "name" => $school->name,
+    //         "description" => $school->school_info,
+    //         "address" => [
+    //             "@type" => "PostalAddress",
+    //             "addressRegion" => $school->province
+    //         ]
+    //     ],
+    //     "offers" => [
+    //         "@type" => "Offer",
+    //         "url" => $currentUrl,
+    //         "priceCurrency" => "THB",
+    //         "price" => $promotionPrice,
+    //         "priceValidUntil" => $priceValidUntilDate, // <-- โปรโมชั่นถึงวันที่
+    //         "priceSpecification" => [
+    //             "@type" => "PriceSpecification",
+    //             "price" => $price,
+    //             "priceCurrency" => "THB",
+    //             "validThrough" => $validThroughDate // <-- ราคาเต็มถึงวันที่
+    //         ],
+    //         "availability" => "https://schema.org/InStock",
+    //         "shippingDetails" => [
+    //             "@type" => "OfferShippingDetails",
+    //             "shippingRate" => [
+    //                 "@type" => "MonetaryAmount",
+    //                 "value" => "0",
+    //                 "currency" => "THB"
+    //             ],
+    //             "deliveryTime" => [
+    //                 "@type" => "ShippingDeliveryTime",
+    //                 "handlingTime" => [
+    //                     "@type" => "QuantitativeValue",
+    //                     "minValue" => 0,
+    //                     "maxValue" => 0,
+    //                     "unitCode" => "DAY"
+    //                 ],
+    //                 "transitTime" => [
+    //                     "@type" => "QuantitativeValue",
+    //                     "minValue" => 0,
+    //                     "maxValue" => 0,
+    //                     "unitCode" => "DAY"
+    //                 ]
+    //             ],
+    //             "shippingDestination" => [
+    //                 "@type" => "DefinedRegion",
+    //                 "addressCountry" => "TH"
+    //             ]
+    //         ],
+    //         "hasMerchantReturnPolicy" => [
+    //             "@type" => "MerchantReturnPolicy",
+    //             "applicableCountry" => "TH",
+    //             "returnPolicyCategory" => "https://schema.org/MerchantReturnNotPermitted"
+    //         ]
+    //     ],
+    //     "aggregateRating" => [
+    //         "@type" => "AggregateRating",
+    //         "ratingValue" => $ratingValue,
+    //         "reviewCount" => $reviewCount
+    //     ],
+    //     "bookFormat" => "https://schema.org/EBook",
+    //     "numberOfPages" => "1500",
+    //     "learningResourceType" => "Book",
+    //     "educationalLevel" => "Middle School"
+    // ];
     $data = [
         "@context" => "https://schema.org",
         "@type" => "Product",
@@ -83,12 +171,6 @@ public function buildForProduct(object $school, string $currentUrl): string
             "priceCurrency" => "THB",
             "price" => $promotionPrice,
             "priceValidUntil" => $priceValidUntilDate, // <-- โปรโมชั่นถึงวันที่
-            "priceSpecification" => [
-                "@type" => "PriceSpecification",
-                "price" => $price,
-                "priceCurrency" => "THB",
-                "validThrough" => $validThroughDate // <-- ราคาเต็มถึงวันที่
-            ],
             "availability" => "https://schema.org/InStock",
             "shippingDetails" => [
                 "@type" => "OfferShippingDetails",
